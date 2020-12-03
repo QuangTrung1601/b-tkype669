@@ -16,9 +16,13 @@ namespace Microsoft.BotBuilderSamples.Bots
             var replyText = $"Echo: {turnContext.Activity.Text}";
             if (turnContext.Activity.Text=="Con nào ế nhất vịnh bắc bộ")
             {
-                 replyText = $"Echo:Đm con đào chứ ai";
-            }    
-            
+                 replyText = "Đm con đào chứ ai";
+            }
+            if (turnContext.Activity.Text == "Ai đz nhất vịnh thái lan")
+            {
+                replyText = "Anh Trung ạ hihi";
+            }
+
             await turnContext.SendActivityAsync(MessageFactory.Text(replyText, replyText), cancellationToken);
         }
 
